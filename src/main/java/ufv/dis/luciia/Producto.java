@@ -4,7 +4,7 @@ public class Producto {
 	
 	String nombre;
 	String cat;
-	int precio;
+	public float precio;
 	String EAN;
 	
 	
@@ -20,7 +20,7 @@ public class Producto {
 	public void setCat(String cat) {
 		this.cat = cat;
 	}
-	public int getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 	public void setPrecio(int precio) {
@@ -32,7 +32,7 @@ public class Producto {
 	public void setEAN(String eAN) {
 		EAN = eAN;
 	}
-	public Producto(String nombre, String cat, int precio, String eAN) {
+	public Producto(String nombre, String cat, float precio, String eAN) {
 		super();
 		this.nombre = nombre;
 		this.cat = cat;

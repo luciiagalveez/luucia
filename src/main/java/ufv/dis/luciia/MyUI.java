@@ -32,27 +32,29 @@ public class MyUI extends UI {
     	
         final VerticalLayout layout = new VerticalLayout();
         
-        final TextField name = new TextField();
-        name.setCaption("Type your name here:");
+        final TextField nombre = new TextField();
+        nombre.setCaption("Type your name here:");
         
-        final TextField category = new TextField();
-        category.setCaption("Type your category here:");
+        final TextField cat = new TextField();
+        cat.setCaption("Type your category here:");
         
-        final TextField ean13 = new TextField();
-        ean13.setCaption("Type your ean13 here:");
+        final TextField precio = new TextField();
+        precio.setCaption("Type your price here:");
         
-        final TextField price = new TextField();
-        price.setCaption("Type your price here:");
+        final TextField EAN = new TextField();
+        EAN.setCaption("Type your ean13 here:");
+        
+
 
         Button button = new Button("Click Me");
         button.addClickListener(e -> {
 
-        	Producto p = new Producto(name.getValue(), cat.getValue(), ean13.getValue(), Float.parseFloat(price.getValue()));
+        	Producto p = new Producto(nombre.getValue(), cat.getValue(), Float.parseFloat(precio.getValue()), EAN.getValue());
         	inventario.addProducto(p);
         	
         });
         
-        layout.addComponents(name, button);
+        layout.addComponents(nombre, button);
         
         setContent(layout);
     }
