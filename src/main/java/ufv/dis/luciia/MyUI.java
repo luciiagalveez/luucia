@@ -55,6 +55,10 @@ public class MyUI extends UI {
         });
         
         layout.addComponents(nombre, button);
+        layout.addComponents(cat, button);
+        layout.addComponents(precio, button);
+        layout.addComponents(EAN, button);
+        
         
         setContent(layout);
     }
